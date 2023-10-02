@@ -1,0 +1,31 @@
+namespace Ordering
+    class StoreItem
+    class Address
+        int long AddressID = ID number of the address within the ordering system
+        string StreetAddress0 = The street address line
+        string StreetAddress1 = The street address line
+        string StreetAddress2 = The street address line
+        string City = The city where the address is located
+        string County = The county the city is in for the address
+        string State = The state for the address
+        float Latittude = The latitude from the GPS coordinates for the address
+        float Longitude = The longitude from the GPS coordinates for the address
+
+    class CustomerCart
+        int long CartID = ID number for the cart
+        int long OrderID = ID number for the completed order
+        int long DeliveryID = ID number for the delivery a driver is going to make
+        int long CustomerID = ID number for the customer ordering the food
+        int long ProviderID = ID number of the providing organization for the food
+        int long AddressCustomerID = ID number of the address object for the customer
+        Ordering.Address AddressCustomer = Address information that is maintained in this object from the original address object
+        int long AddressProviderID = ID number of the address object fro the provider
+        Ordering.Address AddressProvider = Address infromation that is maintained in this object from the original address object
+        float short CartSubtotal = The values for the subtotal of the cart
+        float short DriverTip = The value for the tip to the driver
+        float short Taxes = The value of the taxes being applied to the cart
+        int CartItemsCount = Count of the items that are in the cart
+        Ordering.StoreItem[5] CartItems = Array that holds all the various object copies for store items with their various configurations
+        
+        public void AddItem() = Method to add an item to the cart
+        public void RemoveItem() = method to remove an item from the cart
