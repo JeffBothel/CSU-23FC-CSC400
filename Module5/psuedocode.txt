@@ -1,0 +1,39 @@
+***Recursion Algorithm 1***
+function recurseFactorial0(int n)
+    if(n >= 0 and n <= 1)
+        return 1
+    if(n < 0)
+        throw error "Outside of acceptable range"
+    else
+        return n * recurseFactorial0(n-1)
+
+***Recursion Algorithm 2***
+fucntion recurseFactorial1(int n)
+    if(n >= 0 and n <= 1)
+        return 1
+    if(n < 0)
+        throw error "Outside of acceptable range"
+    else
+        int count = 2
+        while(count <= 2)
+            return 2*recurseFactorial1(n, count)
+
+function recurseFactorial1(int n, int count)
+    if(count < n)
+        return (count-1) * recurseFactorial1(n, count++)
+    else
+        return count * n
+
+***Array display algorithm***
+function reverseDisplayArray(int[] array)
+    int index = array.lenght -1
+    if(count == 0)
+        display array[index=0]
+    else
+        reverseDisplayArray
+
+function reverseDisplayArray(int[] array, int[] index)
+    display "Array item " + index + ": " + array[index]
+    if(index > 0)
+        index--
+        reverseDisplayArray(array, index)
