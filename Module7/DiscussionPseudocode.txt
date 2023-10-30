@@ -1,0 +1,57 @@
+function intMergedSort(int[] inArray)
+    switch(inArray.length)
+        case 0:
+            throw error "invalid array"
+            break
+        case 1:
+            return inArray
+        case 2:
+            int tempArrayValue
+            if(inArray[0] > inArray[1])
+                tempArrayValue = inArray[0]
+                inArray[0] = inArray[1]
+                inArray[1] = tempArrayValue
+            return inArray
+        default:
+            int[] arrayLeft = new int[inArray.length / 2]
+            int[] arrayRight = new int[inArray.length - arrayLeft.length]
+
+            i = 0
+            ii = 0
+            while(i <= (arrayLeft.lenght-1))
+                arrayLeft[i] = inArray[ii]
+                i++
+                ii++
+            i = 0
+            while(i <= (arrayRight.length-1))
+                arrayRight[i] = inArray[ii]
+                i++
+                ii++
+
+            intMergedSort(arrayLeft)
+            intMergedSort(arrayRight)
+
+            i = 0
+            ii = 0
+            inArray = new int[inArray.length]
+            while(i <= (arrayLeft.length-1))
+                inArray[ii] = arrayLeft[i]
+                i++
+                ii++
+            i = 0
+            while(i <= (arrayRight.length - 1))
+                inArray[ii] = arrayRight[i]
+                i++
+                ii++
+
+            i = 0
+            while(i <= (inArray.length-1))
+                if(inArray[i] > inArray[i+1])
+                    int tempValue = inArray[i+1]
+                    inArray[i+1] = inArray[i]
+                    inArray[i] = tempValue
+                    i++
+                else if(inArray[i] == inArray[i+1] or inArray[i] < inArray[i+1])
+                    i++
+            
+            return inArray
