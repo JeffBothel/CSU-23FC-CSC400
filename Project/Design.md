@@ -9,26 +9,30 @@ The following was the given prompt for this project.
 - ***Display Class*** - *Create a Display Class that will store a copy of the order queue in two arrays. Each array will contain the order list but one will be sorted by name and the other sorted by order number. When a order is taken and stored in the Order Class the program will update the Display Class arrays automatically sort them in descending order using quick sort and outputs the the contents to the console upon each entry of new data.*
 - ***Main Class*** - *Create a Main Class that will handle operator data input and when an order is added or removed, the program will update the Order Class and Display Class. The user will be presented a menu to add a order, remove a order and display the order list from the queue.*
 
-From this design prompt the following requirements were identified. Left checkmark is whether the requirement is addressed in Pseudocode, right checkmark is whether the requirement has been addressed in the code.
-* :check_mark_button: Orders will need to be placed in a queue for the orders
-    * [ ] Orders must be stored in this queue in the order they were received
-* [ ] Orders entered have to have specific information
-    * [ ] Last name of the individual ordering
-    * [ ] Number of the order
-    * [ ] Order total
-* [ ] Display class holds the order queue in two separate arrays
-    * [ ] First array has the orders ordered by last name
-    * [ ] Second array has the orders ordered by number
-    * [ ] Updates to the display class are output to the console when they are made
-* [ ] Order class will update the display class arrays when orders are changed
-    * [ ] When orders are removed, the display arrays update
-    * [ ] When orders are added, the display arrays update
-    * [ ] Ordering is done by quick sort algorithm
-    * [ ] Sorted in descending order in the sorted arrays
-* [ ] Interface class handles the user interacting with the classes
-    * [ ] Users need a menu to select what they want to do
-    * [ ] Presented a menu to add a particular order to the queue
-    * [ ] They are presented with an option to remove an order from the queue
+From this design prompt the following requirements were identified. Left checkmark is whether the requirement is addressed in Pseudocode, right checkmark is whether the requirement has been addressed in the code.\
+:white_square_button: = Needed\
+:white_check_mark: = Added\
+:heavy_exclamation_mark: = Problems
+
+* :white_square_button: :white_square_button: Orders will need to be placed in a queue for the orders
+    * :white_square_button: :white_square_button: Orders must be stored in this queue in the order they were received
+* :white_square_button: :white_square_button: Orders entered have to have specific information
+    * :white_square_button: :white_square_button: Last name of the individual ordering
+    * :white_square_button: :white_square_button: Number of the order
+    * :white_square_button: :white_square_button: Order total
+* :white_square_button: :white_square_button: Display class holds the order queue in two separate arrays
+    * :white_square_button: :white_square_button: First array has the orders ordered by last name
+    * :white_square_button: :white_square_button: Second array has the orders ordered by number
+    * :white_square_button: :white_square_button: Updates to the display class are output to the console when they are made
+* :white_square_button: :white_square_button: Order class will update the display class arrays when orders are changed
+    * :white_square_button: :white_square_button: When orders are removed, the display arrays update
+    * :white_square_button: :white_square_button: When orders are added, the display arrays update
+    * :white_square_button: :white_square_button: Ordering is done by quick sort algorithm
+    * :white_square_button: :white_square_button: Sorted in descending order in the sorted arrays
+* :white_square_button: :white_square_button: Interface class handles the user interacting with the classes
+    * :white_square_button: :white_square_button: Users need a menu to select what they want to do
+    * :white_square_button: :white_square_button: Presented a menu to add a particular order to the queue
+    * :white_square_button: :white_square_button: They are presented with an option to remove an order from the queue
 
 ## Program Design
 Given the above prompt, the following design specifications were made to build the program.
@@ -51,7 +55,8 @@ OrderQueue-->OrderStrgQueue[["Order Queue"]]
 The following are the explanations of the classes for the program.
 * **Order** - the class of object that is individual orders that are added to the menu.
 * **OrderQueue** - the class of object that is used for storing and managing the different orders that are submitted.
-* **DisplayQueue** - the class of object that is used for storing and managing the order queue in various sorting arrangements.
+* **DisplayQueues** - the class of object that is used for storing and managing the order queue in various sorting arrangements.
+* **UserInterface** - the class of object that is used for starting and running the program and that manages the interface of the user.
 
 ### Program Pseudocode
 The following Pseudocode has been created for the various classes of the program and the operational program.
