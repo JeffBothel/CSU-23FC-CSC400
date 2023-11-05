@@ -10,25 +10,25 @@ The following was the given prompt for this project.
 - ***Main Class*** - *Create a Main Class that will handle operator data input and when an order is added or removed, the program will update the Order Class and Display Class. The user will be presented a menu to add a order, remove a order and display the order list from the queue.*
 
 From this design prompt the following requirements were identified. Left checkmark is whether the requirement is addressed in Pseudocode, right checkmark is whether the requirement has been addressed in the code.
-* [ ] [ ] Orders will need to be placed in a queue for the orders
-    * [ ][ ] Orders must be stored in this queue in the order they were received
-* [ ][ ] Orders entered have to have specific information
-    * [ ][ ] Last name of the individual ordering
-    * [ ][ ] Number of the order
-    * [ ][ ] Order total
-* [ ][ ] Display class holds the order queue in two separate arrays
-    * [ ][ ] First array has the orders ordered by last name
-    * [ ][ ] Second array has the orders ordered by number
-    * [ ][ ] Updates to the display class are output to the console when they are made
-* [ ][ ] Order class will update the display class arrays when orders are changed
-    * [ ][ ] When orders are removed, the display arrays update
-    * [ ][ ] When orders are added, the display arrays update
-    * [ ][ ] Ordering is done by quick sort algorithm
-    * [ ][ ] Sorted in descending order in the sorted arrays
-* [ ][ ] Interface class handles the user interacting with the classes
-    * [ ][ ] Users need a menu to select what they want to do
-    * [ ][ ] Presented a menu to add a particular order to the queue
-    * [ ][ ] They are presented with an option to remove an order from the queue
+* [ ] Orders will need to be placed in a queue for the orders
+    * [ ] Orders must be stored in this queue in the order they were received
+* [ ] Orders entered have to have specific information
+    * [ ] Last name of the individual ordering
+    * [ ] Number of the order
+    * [ ] Order total
+* [ ] Display class holds the order queue in two separate arrays
+    * [ ] First array has the orders ordered by last name
+    * [ ] Second array has the orders ordered by number
+    * [ ] Updates to the display class are output to the console when they are made
+* [ ] Order class will update the display class arrays when orders are changed
+    * [ ] When orders are removed, the display arrays update
+    * [ ] When orders are added, the display arrays update
+    * [ ] Ordering is done by quick sort algorithm
+    * [ ] Sorted in descending order in the sorted arrays
+* [ ] Interface class handles the user interacting with the classes
+    * [ ] Users need a menu to select what they want to do
+    * [ ] Presented a menu to add a particular order to the queue
+    * [ ] They are presented with an option to remove an order from the queue
 
 ## Program Design
 Given the above prompt, the following design specifications were made to build the program.
