@@ -10,7 +10,7 @@ The following was the given prompt for this project.
 - ***Main Class*** - *Create a Main Class that will handle operator data input and when an order is added or removed, the program will update the Order Class and Display Class. The user will be presented a menu to add a order, remove a order and display the order list from the queue.*
 
 From this design prompt the following requirements were identified. Left checkmark is whether the requirement is addressed in Pseudocode, right checkmark is whether the requirement has been addressed in the code.
-* [ ] Orders will need to be placed in a queue for the orders
+* :check_mark_button: Orders will need to be placed in a queue for the orders
     * [ ] Orders must be stored in this queue in the order they were received
 * [ ] Orders entered have to have specific information
     * [ ] Last name of the individual ordering
