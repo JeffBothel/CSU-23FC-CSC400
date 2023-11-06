@@ -67,13 +67,43 @@ class Order
     int orderNum
     string lastName
     float cost
+
+    public Order()
+    public Order(int num, string lastName, float cost)
+        this.orderNum = num
+        this.lastName = lastName
+        this.cost = cost
+
+    public int GetOrderNumber()
+        return this.orderNum
+
+    public String GetOrderName()
+        return this.lastName
 ```
 
 #### OrderQueue Class
 ```
 class OrderQueue
-    Order[] orderQueue
     int orderCount
+    Order[] orderQueue
+    DisplayQueue displays
+
+    public OrderQueue()
+
+    public OrderQueue GetQueue()
+
+    public GetOrder()
+    public GetOrder(int index)
+
+    public AddOrder(Order inOrder)
+
+    public CompleteOrder()
+
+    public GetByName()
+        displays.GetByName()
+
+    public GetByNumber()
+        displays.GetByNumber()
 ```
 
 #### DisplayQueues Class
@@ -81,6 +111,93 @@ class OrderQueue
 class DisplayQueue
     Order[] lastNameQueue
     Order[] orderNumQueue
+
+    private buildQueues(OrderQueue inOrders)
+        int pivotIndex
+        lastNameQueue = inOrders
+        orderNumQueue = inOrders
+
+        if(inOrders != null)
+        else return
+    
+    private Order[] sortQueues(Order[] queue, boolean sortByName)
+        int pivotIndex
+        Order temp
+        Order[] left = queue.length
+        Order[] right = queue.length
+        Order[] combined = queue.length
+        
+        if(queue.length%2 == 0) pivotIndex = (queue.length/2) - 1
+        else pivotIndex = (queue.length/2)
+
+        i = 0
+        ii = 0
+        while(i <= pivotIndex)
+            left[i] = queue[ii]
+            i++
+            ii++
+
+        i = 0
+        while(ii <= )
+            right[i] = queue[ii]
+            i++
+            ii++
+
+        i = 0
+        while(i < left.length -1)
+            if(!sortByName and left[i].GetOrderNumber() > left[i+1].GetOrderNumber())
+                temp = left[i]
+                left[i] = left[i+1]
+                left[i+1] = temp
+            if(sortByName and left[i].GetOrderName() > left[i+1].GetOrderName())
+                temp = left[i]
+                left[i] = left[i+1]
+                left[i+1] = temp
+            else i++
+
+        while(i < right.length -1)
+            if(!sortByName and right[i].GetOrderNumber() > right[i+1].GetOrderNumber())
+                temp = right[i]
+                right[i] = right[i+1]
+                right[i+1] = temp
+            if(sortByName and right[i].GetOrderName() > right[i+1].GetOrderName())
+                temp = right[i]
+                right[i] = right[i+1]
+                right[i+1] = temp
+            else i++
+
+        i = 0
+        ii = 0
+        for(order in left)
+            combined[i] = left[ii]
+            i++
+            ii++
+
+        ii = 0
+        for(order in right)
+            combined[i] = right[ii]
+            i++
+            ii++
+
+        return combined
+
+    public DisplayQueue()
+        buildQueue(null)
+
+    public void UpdateQueue(OrderQueue inOrders)
+        buildQueues(inOrders)
+
+    public String GetByNumber()
+        outputStr = ""
+        for(order in orderNumQueue)
+            outputStr += order.toString() + \n
+        return outputStr
+            
+    public String GetByName()
+        outputStr = ""
+        for(order in lastNameQueue)
+            outputStr += order.toString() + \n
+        return outputStr
 ```
 
 #### UserInterface Class
